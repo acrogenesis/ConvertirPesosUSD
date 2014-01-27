@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *tipoCambio;
+@property (weak, nonatomic) IBOutlet UITextField *pesos;
+@property (weak, nonatomic) IBOutlet UITextField *dolares;
+- (IBAction)convertirBoton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIImageView *imagenDolar;
 
 @end
