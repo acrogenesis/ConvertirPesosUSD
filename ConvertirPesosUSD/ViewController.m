@@ -27,5 +27,12 @@
 }
 
 - (IBAction)convertirBoton:(id)sender {
+    
+    CGFloat tc = [self.tipoCambio.text doubleValue];
+    CGFloat pe = [self.pesos.text doubleValue];
+    
+    CGFloat dolar = pe / tc;
+    self.dolares.text = [NSString stringWithFormat:@"%0.2f", dolar];
+    
 }
 @end
