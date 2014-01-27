@@ -27,12 +27,16 @@
 }
 
 - (IBAction)convertirBoton:(id)sender {
+    UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Datos inválidos" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ];
     
-    CGFloat tc = [self.tipoCambio.text doubleValue];
-    CGFloat pe = [self.pesos.text doubleValue];
-    
-    CGFloat dolar = pe / tc;
-    self.dolares.text = [NSString stringWithFormat:@"%0.2f", dolar];
-    
+    if ([self.tipoCambio.text isEqualToString:@""] || [self.pesos.text isEqualToString:@""]) {
+        [error show];
+    }else {
+        CGFloat tc = [self.tipoCambio.text doubleValue];
+        CGFloat pe = [self.pesos.text doubleValue];
+        
+        CGFloat dolar = pe / tc;
+        self.dolares.text = [NSString stringWithFormat:@"%0.2f", dolar];
+    }
 }
 @end
