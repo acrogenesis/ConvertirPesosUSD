@@ -21,6 +21,7 @@
     self.imagenDolar.image = [UIImage imageNamed:@"money-bag.png"];
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -39,5 +40,9 @@
         CGFloat dolar = pe / tc;
         self.dolares.text = [NSString stringWithFormat:@"%0.2f", dolar];
     }
+}
+- (IBAction)tapHideKeyboard:(id)sender {
+    [self.tipoCambio resignFirstResponder];
+    [self.pesos resignFirstResponder];
 }
 @end

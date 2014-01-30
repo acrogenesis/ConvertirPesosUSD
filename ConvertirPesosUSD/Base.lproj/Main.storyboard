@@ -75,6 +75,10 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TFc-lQ-v9E" appends="YES" id="U37-hU-Zsw"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="dolares" destination="giW-zu-Zyo" id="rgq-eL-Tk0"/>
@@ -84,6 +88,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TFc-lQ-v9E">
+                    <connections>
+                        <action selector="tapHideKeyboard:" destination="vXZ-lx-hvc" id="hTG-DE-5o7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>

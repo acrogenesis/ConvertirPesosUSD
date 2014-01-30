@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *dolares;
 - (IBAction)convertirBoton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenDolar;
+- (IBAction)tapHideKeyboard:(id)sender;
 
 @end
